@@ -48,6 +48,10 @@
         <Project>{749d79b9-74d3-4deb-a90d-120eb8aa6fbf}</Project>
         <Name>Nant.Core</Name>
       </ProjectReference>
+      <ProjectReference Include="..\NAnt.Win32\NAnt.Win32.csproj">
+        <Project>{dc9eff01-cbdf-4741-bbdf-80d7d77284d0}</Project>
+        <Name>NAnt.Win32</Name>
+      </ProjectReference>
     </ItemGroup>
     <ItemGroup>
       <None Include="app.config" />

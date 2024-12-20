@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NAnt.Console", "NAnt.Consol
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nant.Core", "Nant.Core\Nant.Core.csproj", "{749D79B9-74D3-4DEB-A90D-120EB8AA6FBF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NAnt.Win32", "NAnt.Win32\NAnt.Win32.csproj", "{DC9EFF01-CBDF-4741-BBDF-80D7D77284D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{749D79B9-74D3-4DEB-A90D-120EB8AA6FBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{749D79B9-74D3-4DEB-A90D-120EB8AA6FBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{749D79B9-74D3-4DEB-A90D-120EB8AA6FBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC9EFF01-CBDF-4741-BBDF-80D7D77284D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC9EFF01-CBDF-4741-BBDF-80D7D77284D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC9EFF01-CBDF-4741-BBDF-80D7D77284D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC9EFF01-CBDF-4741-BBDF-80D7D77284D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

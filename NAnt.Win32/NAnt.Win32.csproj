@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props"
+            Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{DC9EFF01-CBDF-4741-BBDF-80D7D77284D0}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>NAnt.Win32</RootNamespace>
+        <AssemblyName>NAnt.Win32Tasks</AssemblyName>
+        <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="System"/>
+        <Reference Include="System.Core"/>
+        <Reference Include="System.Data"/>
+        <Reference Include="System.Xml"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="dotnet\Tasks\AssemblyInfoTask.cs" />
+        <Compile Include="dotnet\Tasks\AssemblyLinkerTask.cs" />
+        <Compile Include="dotnet\Tasks\CompilerBase.cs" />
+        <Compile Include="dotnet\Tasks\CscTask.cs" />
+        <Compile Include="dotnet\Tasks\DelaySignTask.cs" />
+        <Compile Include="dotnet\Tasks\IlasmTask.cs" />
+        <Compile Include="dotnet\Tasks\JscTask.cs" />
+        <Compile Include="dotnet\Tasks\LicenseTask.cs" />
+        <Compile Include="dotnet\Tasks\RegSvcsTask.cs" />
+        <Compile Include="dotnet\Tasks\ResGenTask.cs" />
+        <Compile Include="dotnet\Tasks\ScriptTask.cs" />
+        <Compile Include="dotnet\Tasks\VbcTask.cs" />
+        <Compile Include="dotnet\Tasks\VjcTask.cs" />
+        <Compile Include="dotnet\Types\AssemblyAttribute.cs" />
+        <Compile Include="dotnet\Types\AssemblyAttributeCollection.cs" />
+        <Compile Include="dotnet\Types\AssemblyFileSet.cs" />
+        <Compile Include="dotnet\Types\CompilerWarning.cs" />
+        <Compile Include="dotnet\Types\CompilerWarningCollection.cs" />
+        <Compile Include="dotnet\Types\DebugOutput.cs" />
+        <Compile Include="dotnet\Types\DelaySign.cs" />
+        <Compile Include="dotnet\Types\EmbeddedResource.cs" />
+        <Compile Include="dotnet\Types\EmbeddedResourceCollection.cs" />
+        <Compile Include="dotnet\Types\Module.cs" />
+        <Compile Include="dotnet\Types\ModuleCollection.cs" />
+        <Compile Include="dotnet\Types\ModuleSet.cs" />
+        <Compile Include="dotnet\Types\NamespaceImport.cs" />
+        <Compile Include="dotnet\Types\NamespaceImportCollection.cs" />
+        <Compile Include="dotnet\Types\Package.cs" />
+        <Compile Include="dotnet\Types\PackageCollection.cs" />
+        <Compile Include="dotnet\Types\ResourceFileSet.cs" />
+        <Compile Include="dotnet\Types\ResourceFileSetCollection.cs" />
+        <Compile Include="dotnet\Types\WarningAsError.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs"/>
+        <Compile Include="win32\Functions\CygpathFunctions.cs" />
+        <Compile Include="win32\Tasks\AxImpTask.cs" />
+        <Compile Include="win32\Tasks\LocateSdkTask.cs" />
+        <Compile Include="win32\Tasks\MonoRegistryTask.cs" />
+        <Compile Include="win32\Tasks\ReadRegistryTask.cs" />
+        <Compile Include="win32\Tasks\RegAsmTask.cs" />
+        <Compile Include="win32\Tasks\TlbExpTask.cs" />
+        <Compile Include="win32\Tasks\TlbImpTask.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\Nant.Core\Nant.Core.csproj">
+        <Project>{749d79b9-74d3-4deb-a90d-120eb8aa6fbf}</Project>
+        <Name>Nant.Core</Name>
+      </ProjectReference>
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+
+</Project>
